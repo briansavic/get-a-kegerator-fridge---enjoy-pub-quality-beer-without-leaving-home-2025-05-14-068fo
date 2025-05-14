@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Kegerator Fridges | Home Draft Beer Systems</title>
     <meta name="description" content="Get pub-quality draft beer at home with our premium kegerator fridges. Perfect temperature control, hassle-free setup, and modern design.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .feature-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .nav-link {
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #1a202c;
+            transform: translateY(-1px);
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
     <!-- Announcement Bar -->
@@ -18,24 +57,33 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-12">
-                <a href="/" class="text-2xl font-bold">KegeratorPro</a>
+                <a href="https://briansavic.github.io/get-a-kegerator-fridge---enjoy-pub-quality-beer-without-leaving-home-2025-05-14-068fo" class="text-2xl font-bold hover:text-gray-700 transition-colors duration-300">KegeratorPro</a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Features</a>
-                    <a href="#benefits" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Benefits</a>
-                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">FAQ</a>
+                    <a href="#features" class="nav-link text-gray-600">Features</a>
+                    <a href="#benefits" class="nav-link text-gray-600">Benefits</a>
+                    <a href="#testimonials" class="nav-link text-gray-600">Testimonials</a>
+                    <a href="#faq" class="nav-link text-gray-600">FAQ</a>
+                    <a href="#about" class="nav-link text-gray-600">About Us</a>
                 </div>
             </div>
             <div class="flex items-center space-x-6">
                 <a href="https://briansavic.com" class="hidden md:inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
                     Shop Now
                 </a>
-                <button class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+                <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </nav>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#features" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">Features</a>
+            <a href="#benefits" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">Benefits</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">Testimonials</a>
+            <a href="#faq" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">FAQ</a>
+            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">About Us</a>
+            <a href="https://briansavic.com" class="block px-4 py-2 text-white bg-gray-900 hover:bg-gray-800">Shop Now</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -46,7 +94,7 @@
         </div>
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Get a Kegerator Fridge & Enjoy Pub-Quality Beer Without Leaving Home</h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-8">Perfectly chilled, fresh draft beer to your kitchen or bar.</p>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8">Experience the perfect pour with commercial-grade draft systems designed for your home.</p>
             <a href="https://briansavic.com" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-gray-900 bg-white hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Explore Kegerators
             </a>
@@ -58,26 +106,26 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Premium Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
                     <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-ruler text-2xl text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Wide Range of Sizes</h3>
-                    <p class="text-gray-600">Find the perfect size for your space, from compact units to commercial-grade systems.</p>
+                    <p class="text-gray-600">From compact mini kegerators to commercial-grade systems, find the perfect size for your space and needs.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
                     <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-tools text-2xl text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Hassle-free Setup</h3>
-                    <p class="text-gray-600">Easy installation with comprehensive guides and support for quick beer enjoyment.</p>
+                    <p class="text-gray-600">Quick and easy installation with comprehensive guides and dedicated customer support.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
                     <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-truck text-2xl text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Portable Models</h3>
-                    <p class="text-gray-600">Take your draft beer anywhere with our mobile-friendly designs.</p>
+                    <p class="text-gray-600">Lightweight and mobile-friendly designs perfect for outdoor events and parties.</p>
                 </div>
             </div>
         </div>
@@ -88,9 +136,9 @@
         <!-- Benefit 1 -->
         <div class="flex flex-col md:flex-row items-center bg-white">
             <div class="w-full md:w-1/2 p-12 md:p-24">
-                <h3 class="text-3xl font-bold mb-6">Durable Construction</h3>
-                <p class="text-gray-600 mb-8">Built to last with premium materials and expert craftsmanship for years of reliable service.</p>
-                <a href="https://briansavic.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300">
+                <h3 class="text-3xl font-bold mb-6">Professional-Grade Construction</h3>
+                <p class="text-gray-600 mb-8">Built with commercial-quality stainless steel and premium components, our kegerators deliver years of reliable performance. Each unit undergoes rigorous quality testing to ensure durability and longevity.</p>
+                <a href="https://briansavic.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 hover:scale-105">
                     Learn More
                 </a>
             </div>
@@ -105,9 +153,9 @@
                 <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" alt="High-quality kegerator" class="w-full h-full object-cover">
             </div>
             <div class="w-full md:w-1/2 p-12 md:p-24">
-                <h3 class="text-3xl font-bold mb-6">Premium Quality</h3>
-                <p class="text-gray-600 mb-8">Experience superior draft beer quality with our professional-grade systems.</p>
-                <a href="https://briansavic.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300">
+                <h3 class="text-3xl font-bold mb-6">Superior Draft Quality</h3>
+                <p class="text-gray-600 mb-8">Experience bar-quality draft beer with our advanced cooling and dispensing systems. Featuring premium tap hardware and perfectly balanced CO2 regulators for the ideal pour every time.</p>
+                <a href="https://briansavic.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 hover:scale-105">
                     Discover More
                 </a>
             </div>
@@ -116,9 +164,9 @@
         <!-- Benefit 3 -->
         <div class="flex flex-col md:flex-row items-center bg-white">
             <div class="w-full md:w-1/2 p-12 md:p-24">
-                <h3 class="text-3xl font-bold mb-6">Precise Temperature Control</h3>
-                <p class="text-gray-600 mb-8">Digital temperature control ensures your beer is served at the perfect temperature, every time.</p>
-                <a href="https://briansavic.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300">
+                <h3 class="text-3xl font-bold mb-6">Digital Temperature Control</h3>
+                <p class="text-gray-600 mb-8">Advanced digital thermostat with LCD display ensures precise temperature control. Maintain optimal serving temperatures for different beer styles, from crisp lagers to rich stouts.</p>
+                <a href="https://briansavic.com" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 hover:scale-105">
                     See Details
                 </a>
             </div>
@@ -128,12 +176,84 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The digital temperature control is amazing. My craft beers taste just like they do at the brewery. Best investment for my home bar setup."</p>
+                    <p class="font-bold">John D.</p>
+                    <p class="text-sm text-gray-500">Home Brewing Enthusiast</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Installation was a breeze, and the customer support team was incredibly helpful. Now I'm serving perfect pints at every party."</p>
+                    <p class="font-bold">Sarah M.</p>
+                    <p class="text-sm text-gray-500">Restaurant Owner</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The build quality is exceptional. After six months of heavy use, it's still performing perfectly. Worth every penny."</p>
+                    <p class="font-bold">Mike R.</p>
+                    <p class="text-sm text-gray-500">Bar Manager</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Compact design fits perfectly in my apartment. The portable model is perfect for my weekend gatherings."</p>
+                    <p class="font-bold">Lisa K.</p>
+                    <p class="text-sm text-gray-500">Event Planner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About KegeratorPro</h2>
+            <div class="space-y-8">
+                <p class="text-gray-600 leading-relaxed">
+                    Founded in 2015 by a team of craft beer enthusiasts and engineering experts, KegeratorPro emerged from a simple vision: bringing the authentic pub experience into homes worldwide. What started as a small workshop in Portland has grown into a leading manufacturer of premium home draft systems.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Our mission is to deliver professional-grade draft systems that make every pour perfect. We believe in quality craftsmanship, innovative design, and exceptional customer service. Our core values of excellence, reliability, and customer satisfaction drive everything we do, from product development to after-sales support.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section id="faq" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <button class="w-full text-left px-6 py-4 focus:outline-none">
                         <div class="flex justify-between items-center">
                             <h3 class="text-lg font-semibold">How long does installation take?</h3>
@@ -141,18 +261,55 @@
                         </div>
                     </button>
                     <div class="px-6 pb-4">
-                        <p class="text-gray-600">Most installations can be completed in under 30 minutes with our step-by-step guide.</p>
+                        <p class="text-gray-600">Most installations can be completed in under 30 minutes with our step-by-step guide. Our customer support team is available 7 days a week to assist with any questions.</p>
                     </div>
                 </div>
-                <!-- Additional FAQ items here -->
+                
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What maintenance is required?</h3>
+                            <span class="transform transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">Regular cleaning every 2-3 weeks is recommended. We provide a comprehensive cleaning kit and detailed maintenance guide with every purchase.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What size keg does it fit?</h3>
+                            <span class="transform transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">Our standard models accommodate full-size kegs (1/2 barrel), slim quarter kegs, and Cornelius kegs. Custom sizes are available for specific needs.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What's included in the warranty?</h3>
+                            <span class="transform transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">All units come with a comprehensive 2-year warranty covering parts and labor. Extended warranty options are available for additional protection.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="relative py-24 bg-gray-900">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Enjoy Draft Beer at Home?</h2>
+    <section class="relative py-24 bg-gray-900 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=1600&h=900&fit=crop&q=80')">
+        <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Elevate Your Home Bar Experience?</h2>
+            <p class="text-xl text-gray-300 mb-8">Join thousands of satisfied customers enjoying pub-quality draft beer at home.</p>
             <a href="https://briansavic.com" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-gray-900 bg-white hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Shop Kegerators Now
             </a>
@@ -165,33 +322,37 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h4 class="text-xl font-bold mb-4">Contact Us</h4>
-                    <p class="mb-2">Email: keg@me.com</p>
+                    <p class="mb-2">Email: support@kegeratorpro.com</p>
+                    <p class="mb-2">Phone: (555) 123-4567</p>
                     <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300 transition-colors duration-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300 transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-gray-300 transition-colors duration-300"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gray-300">About Us</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Blog</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Support</a></li>
+                        <li><a href="#about" class="hover:text-gray-300 transition-colors duration-300">About Us</a></li>
+                        <li><a href="https://briansavic.github.io/get-a-kegerator-fridge---enjoy-pub-quality-beer-without-leaving-home-2025-05-14-068fo/blog.html" class="hover:text-gray-300 transition-colors duration-300">Blog</a></li>
+                        <li><a href="#features" class="hover:text-gray-300 transition-colors duration-300">Features</a></li>
+                        <li><a href="#support" class="hover:text-gray-300 transition-colors duration-300">Support</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Policies</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gray-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Shipping Policy</a></li>
+                        <li><a href="https://briansavic.github.io/get-a-kegerator-fridge---enjoy-pub-quality-beer-without-leaving-home-2025-05-14-068fo/privacy.html" class="hover:text-gray-300 transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="https://briansavic.github.io/get-a-kegerator-fridge---enjoy-pub-quality-beer-without-leaving-home-2025-05-14-068fo/terms.html" class="hover:text-gray-300 transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="#shipping" class="hover:text-gray-300 transition-colors duration-300">Shipping Policy</a></li>
+                        <li><a href="#warranty" class="hover:text-gray-300 transition-colors duration-300">Warranty Info</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Newsletter</h4>
+                    <p class="mb-4 text-gray-300">Stay updated with our latest products and deals.</p>
                     <form class="mt-4">
-                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-md text-gray-900">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500">
                         <button type="submit" class="mt-2 w-full bg-white text-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition-colors duration-300">Subscribe</button>
                     </form>
                 </div>
@@ -201,5 +362,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
