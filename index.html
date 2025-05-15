@@ -299,6 +299,49 @@
             </div>
         </div>
     </section>
+<!-- Keg Carbonation Calculator Section -->
+    <section id="keg-carbonation-calculator" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Keg Carbonation Calculator</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Helps you determine the exact amount of priming sugar or carbonation drops needed to achieve the perfect carbonation level for your beer, based on temperature, beer style, and desired carbonation. This tool ensures you avoid under- or over-carbonation and consistently enjoy professional-quality beer.
+                </p>
+<!-- Calculator Form -->
+                <form id="carbonationCalculatorForm" class="mt-8 space-y-6 text-left">
+                    <div>
+                        <label for="targetCo2" class="block text-sm font-medium text-gray-700">Target CO2 Volumes (e.g., 2.0 - 3.0)</label>
+                        <input type="number" id="targetCo2" name="targetCo2" value="2.5" step="0.1" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="beerVolume" class="block text-sm font-medium text-gray-700">Beer Volume (Liters)</label>
+                        <input type="number" id="beerVolume" name="beerVolume" value="19" step="0.5" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm">
+                    </div>
+                    <div class="flex items-center justify-between space-x-4 pt-2">
+                        <button type="submit" class="w-1/2 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-300 transform hover:scale-105">
+                            Calculate
+                        </button>
+                        <button type="button" id="resetCalculator" class="w-1/2 inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition-all duration-300">
+                            Reset
+                        </button>
+                    </div>
+                    <div id="calculatorResult" class="mt-6 p-4 bg-gray-100 rounded-md text-center" style="display: none;">
+                        <h4 class="text-lg font-semibold text-gray-800">Priming Sugar Needed:</h4>
+                        <p class="text-2xl font-bold text-gray-900"><span id="sugarAmount">0</span> g</p>
+                        <p class="text-sm text-gray-600 mt-1">(Sucrose/Table Sugar, assumes ~0.5 vol residual CO2)</p>
+                    </div>
+                </form>
+                <!-- Optional: Add a button or link to the calculator tool if it exists -->
+                <!--
+                <div class="mt-10">
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+                        Use Calculator
+                    </a>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
 
     <!-- About Us Section -->
     <section id="about" class="py-24 bg-white">
@@ -418,47 +461,4 @@
                 <div>
                     <h4 class="text-xl font-bold mb-4">Newsletter</h4>
                     <p class="mb-4 text-gray-300">Stay updated with our latest products and deals.</p>
-                    <form class="mt-4">
-                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500">
-                        <button type="submit" class="mt-2 w-full bg-white text-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition-colors duration-300">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p>&copy; 2024 KegeratorPro. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
-            const mobileMenu = document.querySelector('header nav .mobile-menu');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    if (icon) {
-                        icon.classList.toggle('fa-bars');
-                        icon.classList.toggle('fa-times');
-                    }
-                });
-
-                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-                mobileMenuLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        const icon = mobileMenuButton.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    });
-                });
-            }
-        });
-    </script>
-</body>
-</body>
-</html>
+       
